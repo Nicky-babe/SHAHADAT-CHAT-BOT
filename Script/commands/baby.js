@@ -169,8 +169,6 @@ module.exports.handleEvent = async function ({ api, event, Users }) {
         "৮১ , ৮২ , ৮৩ আমি তোমাকে ভালবাসি",
         "আমাকে ডাকলে ,আমি কিন্তু 𝐊𝐢𝐬𝐬 করে দিব 😘" 
       ];
-
-
       const randomReply = greetings[Math.floor(Math.random() * greetings.length)];
       const mention = {
         body: `@${senderName} ${randomReply}`,
