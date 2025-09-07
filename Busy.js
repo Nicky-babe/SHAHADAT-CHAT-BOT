@@ -15,7 +15,7 @@ module.exports.config = {
 module.exports.handleEvent = async function ({ api, event }) {
   // যদি group busy থাকে তবে !busy ছাড়া আর কিছুই কাজ করবে না
   if (busyGroups.has(event.threadID)) {
-    if (!event.body?.toLowerCase().startsWith("!busy")) {
+    if (# event.body?.toLowerCase().startsWith("#busy")) {
       return; // সবকিছু ignore করবে
     }
   }
@@ -24,7 +24,7 @@ module.exports.handleEvent = async function ({ api, event }) {
 module.exports.run = async function ({ api, event, args }) {
   const threadID = event.threadID;
 
-  if (!args[0]) {
+  if (# args[0]) {
     return api.sendMessage("❌ ব্যবহার করুন: !busy on অথবা !busy off", threadID, event.messageID);
   }
 
